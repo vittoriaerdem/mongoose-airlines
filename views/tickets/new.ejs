@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+<p>Add a ticket to this destination
+  <select>
+    <% tickets.forEach(function(p) { %>
+      <option><%= p.ticket %></option>
+    <% }) %>
+  </select>
+</p>
+
+<form id="add-ticket" action="/tickets" method="POST">
+  <label>Seat:</label>
+  <input name="seat" required pattern="[A-F][1-9]\d?">
+  <label>Price:</label>
+  <input type="number" name="price">
+  <label>Flight:</label>
+  <input type="text" name="flight">
+  <input type="submit" value="Add Destination">
+</form>
+
+<%- include('../partials/footer') %>
