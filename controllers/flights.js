@@ -1,7 +1,6 @@
 
-var Flight = require('../models/flight');
-var Destinations = require('../models/flight');
-var Ticket = require('../models/ticket');
+var Flight = require('../models/Flight');
+var Destinations = require('../models/Flight');
 
 module.exports = {
   index,
